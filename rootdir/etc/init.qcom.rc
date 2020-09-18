@@ -68,6 +68,10 @@ on boot
     # Enable oppo touchpanel direction
     write /proc/touchpanel/oppo_tp_direction 1
 
+    # Kernelspace battery saver
+    chown system system /sys/module/battery_saver/parameters/enabled
+    chmod 0660 /sys/module/battery_saver/parameters/enabled
+
     # Update touchscreen firmware
     write /proc/touchpanel/tp_fw_update 1
 

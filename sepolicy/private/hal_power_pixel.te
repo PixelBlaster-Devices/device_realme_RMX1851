@@ -48,3 +48,7 @@ get_prop(hal_power_pixel, hwservicemanager_prop)
 
 # To get/set powerhal state property
 set_prop(hal_power_pixel, vendor_power_prop)
+
+# For kernelspace battery saver
+allow hal_power_pixel sysfs_battery_saver:dir r_dir_perms;
+allow hal_power_pixel sysfs_battery_saver:file rw_file_perms;

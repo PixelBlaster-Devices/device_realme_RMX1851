@@ -119,6 +119,9 @@ ndk::ScopedAStatus Power::setMode(Mode type, bool enabled) {
             }
             break;
         case Mode::LOW_POWER:
+            {
+            sysfs_write("/sys/module/battery_saver/parameters/enabled", enabled ? "Y" : "N");
+            }
             break;
         case Mode::SUSTAINED_PERFORMANCE:
             if (enabled && !mSustainedPerfModeOn) {
