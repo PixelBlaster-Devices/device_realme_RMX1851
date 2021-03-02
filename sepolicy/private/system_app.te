@@ -14,3 +14,6 @@ allow system_app proc_touchpanel:file { getattr open read write };
 
 # OTG Tile
 allow system_app sysfs_usb_supply:file { write };
+
+# allow system apps to read battery status
+r_dir_file(system_app, sysfs_battery_supply)
