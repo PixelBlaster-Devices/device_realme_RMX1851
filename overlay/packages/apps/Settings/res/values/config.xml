@@ -23,10 +23,10 @@
     <!-- For Enabling Battery Heath -->
 <bool name="config_supportBatteryHealth">true</bool>
 
-<!-- If device supports battery health options -->
-<string name="config_batChargeCycle">/sys/class/power_supply/bms/cycle_count</string>
-<string name="config_batDesCap">/sys/class/power_supply/bms/charge_full_design</string>
-<string name="config_batCurCap">/sys/class/power_supply/bms/charge_full</string>
+<!-- Battery Health -->
+    <string name="config_batDesCap">/sys/class/power_supply/battery/charge_full</string>
+    <string name="config_batCurCap">/sys/class/power_supply/battery/charge_counter</string>
+    <bool name="config_showChargingCycles">false</bool> 
 
     <!-- Smart Charging -->
     <bool name="config_supportSmartCharging">true</bool>
