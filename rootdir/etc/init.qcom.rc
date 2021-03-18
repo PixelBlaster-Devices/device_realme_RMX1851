@@ -72,7 +72,7 @@ on boot
     write /proc/touchpanel/tp_fw_update 1
 
     # OTG
-    write /sys/class/power_supply/usb/otg_switch 1
+    write /sys/class/power_supply/usb/otg_switch 0
 
     # FP
     chown system system /dev/goodix_fp
