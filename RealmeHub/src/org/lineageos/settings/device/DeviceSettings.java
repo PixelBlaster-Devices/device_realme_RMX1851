@@ -54,7 +54,6 @@ public class DeviceSettings extends PreferenceFragment
 
     private static final String KEY_CATEGORY_GRAPHICS = "graphics";
     public static final String KEY_OTG_SWITCH = "otg";
-    public static final String KEY_GAME_SWITCH = "game";
     public static final String PREF_KEY_FPS_INFO = "fps_info";
     public static final String KEY_CHARGING_SWITCH = "smart_charging";
     public static final String KEY_RESET_STATS = "reset_stats";
@@ -65,7 +64,6 @@ public class DeviceSettings extends PreferenceFragment
     public static final String KEY_SETTINGS_PREFIX = "device_setting_";
 
     private static TwoStatePreference mOTGModeSwitch;
-    private static TwoStatePreference mGameModeSwitch;
     private static TwoStatePreference mSmartChargingSwitch;
     private static NotificationManager mNotificationManager;
     public static TwoStatePreference mResetStats;
@@ -83,11 +81,6 @@ public class DeviceSettings extends PreferenceFragment
         mOTGModeSwitch.setEnabled(OTGModeSwitch.isSupported());
         mOTGModeSwitch.setChecked(OTGModeSwitch.isCurrentlyEnabled(this.getContext()));
         mOTGModeSwitch.setOnPreferenceChangeListener(new OTGModeSwitch());
-
-        mGameModeSwitch = (TwoStatePreference) findPreference(KEY_GAME_SWITCH);
-        mGameModeSwitch.setEnabled(GameModeSwitch.isSupported());
-        mGameModeSwitch.setChecked(GameModeSwitch.isCurrentlyEnabled(this.getContext()));
-        mGameModeSwitch.setOnPreferenceChangeListener(new GameModeSwitch(getContext()));
 
         SwitchPreference fpsInfo = (SwitchPreference) findPreference(PREF_KEY_FPS_INFO);
         fpsInfo.setChecked(prefs.getBoolean(PREF_KEY_FPS_INFO, false));

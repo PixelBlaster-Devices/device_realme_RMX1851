@@ -9,17 +9,6 @@ on boot
   chown system system /sys/kernel/oppo_display/cabc
   chmod 0644 /sys/kernel/oppo_display/cabc
 
-# Game Mode perf profile
-on property:perf_profile=0
-  write /sys/module/cpu_input_boost/parameters/input_boost_duration 64
-  write /sys/module/cpu_input_boost/parameters/input_boost_freq_lp 0
-  write /sys/module/cpu_input_boost/parameters/input_boost_freq_hp 0
-
-on property:perf_profile=1
-  write /sys/module/cpu_input_boost/parameters/input_boost_duration 100 
-  write /sys/module/cpu_input_boost/parameters/input_boost_freq_lp 1708800
-  write /sys/module/cpu_input_boost/parameters/input_boost_freq_hp 2208000
-
 # CABC off
 on property:persist.cabc_profile=0
   write /sys/kernel/oppo_display/cabc 0
