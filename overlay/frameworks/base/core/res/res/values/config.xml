@@ -374,4 +374,7 @@
     <string name="config_SmartChargingSysfsNode" translatable="false">/sys/class/power_supply/battery/input_suspend</string>
     <string name="config_SmartChargingSuspendValue" translatable="false">1</string>
     <string name="config_SmartChargingResumeValue" translatable="false">0</string>
+
+    <!-- Flag indicating which package name can access DeviceConfig table -->
+    <string name="config_deviceConfiguratorPackageName" translatable="false">org.protonaosp.deviceconfig</string>
 </resources>
