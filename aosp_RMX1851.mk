@@ -18,9 +18,8 @@
 TARGET_GAPPS_ARCH=arm64
 TARGET_USES_FACE_UNLOCK := true
 
-# Hycon
-HYCON_MAINTAINER := TheTablaster
-
+# Blaster
+BLASTER_BUILD_TYPE := OFFICIAL
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
