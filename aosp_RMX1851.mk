@@ -13,6 +13,9 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_GAPPS_ARCH := arm64
 
+# PixelBlaster
+BLASTER_BUILD_TYPE := OFFICIAL
+
 # Device identifier. This must come after all inclusions.
 PRODUCT_DEVICE := RMX1851
 PRODUCT_NAME := aosp_RMX1851
