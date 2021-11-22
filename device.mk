@@ -49,7 +49,8 @@ PRODUCT_COPY_FILES += \
 
 # Common init scripts
 PRODUCT_PACKAGES += \
-    init.oppo.rc
+    init.oppo.rc \
+    init.camera_firmware.rc
 
 # Fingerprint
 PRODUCT_PACKAGES += \
